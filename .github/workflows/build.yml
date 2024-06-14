@@ -31,7 +31,7 @@ jobs:
          DOCKER_CLI_ACI: 1
       - name: Image scan
         run: trivy image yashthedocker/tic-tac-toe:latest > trivyimage.txt
-  deploy:
+deploy:
    needs: build-analyze-scan   
    runs-on: [self-hosted]
    steps:
