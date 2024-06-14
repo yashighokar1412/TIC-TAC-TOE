@@ -39,7 +39,7 @@ jobs:
         run: docker pull yashthedocker/tic-tac-toe:latest
 
       - name: Image scan
-        run: trivy image yashthedockar/tic-tac-toe:latest > trivyimagedeploy.txt  
+        run: trivy image yashthedocker/tic-tac-toe:latest > trivyimagedeploy.txt  
 
       - name: Deploy to container
         run: docker run -d --name game -p 3000:3000 yashthedocker/tic-tac-toe:latest
